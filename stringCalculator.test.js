@@ -19,4 +19,9 @@ const { add } = require('./stringCalculator');
     test('should handle newlines as delimiters', () => {
         expect(add("1\n2,3")).toBe(6);
     });
+
+    test('should support custom delimiters', () => {
+        expect(add("//;\n1;2")).toBe(3);
+    });
+    
     
