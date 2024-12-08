@@ -4,3 +4,7 @@ const { add } = require('./stringCalculator');
         expect(add("")).toBe(0);
     });
 
+    test('should return the number itself if only one number is provided', () => {
+        expect(add("5")).toBe(5);
+    });
+    
