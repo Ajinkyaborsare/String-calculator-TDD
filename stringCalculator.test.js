@@ -25,5 +25,14 @@ test('should support custom delimiters', () => {
 });
 
 
+test('should throw an error for negative numbers', () => {
+    expect(() => add("1,-2,3")).toThrow("negative numbers not allowed: -2");
+});
+
+test('should list all negative numbers in the error message', () => {
+    expect(() => add("-1,-2,3")).toThrow("negative numbers not allowed: -1,-2");
+});
+
+
 
 
