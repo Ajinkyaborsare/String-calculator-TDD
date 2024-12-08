@@ -8,3 +8,10 @@ const { add } = require('./stringCalculator');
         expect(add("5")).toBe(5);
     });
     
+    test('should return the sum of two comma-separated numbers', () => {
+        expect(add("1,2")).toBe(3);
+    });
+    
+    test('should return the sum of multiple comma-separated numbers', () => {
+        expect(add("1,2,3")).toBe(6);
+    });
